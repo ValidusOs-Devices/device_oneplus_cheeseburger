@@ -230,10 +230,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/vendor/etc/xtwifi.conf
 
 # Healthd
-#PRODUCT_PACKAGES += \
-#    android.hardware.health@1.0-convert \
-#    android.hardware.health@1.0-impl \
-#    android.hardware.health@1.0-service \
+PRODUCT_PACKAGES += \
+    android.hardware.health@1.0-impl \
+    android.hardware.health@1.0-convert \
+    android.hardware.health@1.0-service
 
 # IPv6
 PRODUCT_PACKAGES += \
@@ -318,7 +318,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OnePlusCamera \
     OnePlusCameraService \
-    OnePlusGallery 
+    OnePlusGallery
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/lib/libfilter-sdk.so:system/lib/libfilter-sdk.so \
