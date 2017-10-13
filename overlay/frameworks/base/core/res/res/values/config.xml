@@ -464,4 +464,8 @@
          proximity sensor (ideally < 300ms) -->
     <bool name="config_proximityCheckOnWake">true</bool>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
+
+    <!-- Should proximity check also affect fingerprint reader-->
+    <bool name="config_proximityCheckOnFingerprintWake">true</bool>
+
 </resources>
