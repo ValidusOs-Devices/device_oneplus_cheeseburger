@@ -226,3 +226,6 @@ persist.dbg.wfc_avail_ovr=1
 
 # Wi-Fi
 wifi.interface=wlan0
+
+# Themes
+ro.boot.vendor.overlay.theme=com.google.android.theme.pixel
