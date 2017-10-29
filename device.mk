@@ -156,6 +156,13 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
     libbt-vendor
 
+# SOTER (Fingerprint support for WeChat Payment)
+PRODUCT_PACKAGES += \
+    soter
+
+PRODUCT_BOOT_JARS += \
+     soter
+ 
 # Camera
 PRODUCT_PACKAGES += \
     libcamera_shim
