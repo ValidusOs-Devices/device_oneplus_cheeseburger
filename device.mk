@@ -25,10 +25,10 @@
 $(call inherit-product, vendor/oneplus/cheeseburger/cheeseburger-vendor.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS= $(LOCAL_PATH)/overlay
 
 # Permissions
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:system/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
@@ -73,7 +73,7 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Device was launched with N
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PROPERTY_OVERRIDES= \
     ro.product.first_api_level=25
 
 # Boot animation
@@ -81,7 +81,7 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
 # Dalvik
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PROPERTY_OVERRIDES= \
     dalvik.vm.heapstartsize=16m \
     dalvik.vm.heapgrowthlimit=256m \
     dalvik.vm.heapsize=512m \
@@ -90,7 +90,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapmaxfree=8m
 
 # HWUI
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PROPERTY_OVERRIDES= \
     ro.hwui.texture_cache_size=96 \
     ro.hwui.layer_cache_size=64 \
     ro.hwui.r_buffer_cache_size=12 \
@@ -107,7 +107,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_CHARACTERISTICS := nosdcard
 
 # Audio
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
@@ -123,7 +123,7 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     tinymix
 
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     $(LOCAL_PATH)/audio/aanc_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/aanc_tuning_mixer.txt \
     $(LOCAL_PATH)/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
@@ -133,7 +133,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_tasha.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tasha.xml \
     $(LOCAL_PATH)/audio/mixer_paths_tavil.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tavil.xml \
 
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
@@ -143,44 +143,44 @@ PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
 
 # ANT+
-#PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES= \
 #    AntHalService \
 #    com.dsi.ant.antradio_library \
 #    libantradio
 
-#PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES= \
 #    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Bluetooth
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.bluetooth@1.0-impl \
     libbt-vendor
 
 # SOTER (Fingerprint support for WeChat Payment)
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     soter
 
-PRODUCT_BOOT_JARS += \
-     soter
- 
+PRODUCT_BOOT_JARS= \
+    soter
+
 # Camera
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     libcamera_shim
 
-PRODUCT_PACKAGES += camera.device@3.2-impl
-PRODUCT_PACKAGES += android.hardware.camera.provider@2.4-impl
+PRODUCT_PACKAGES= camera.device@3.2-impl
+PRODUCT_PACKAGES= android.hardware.camera.provider@2.4-impl
 
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
 vendor.qti.hardware.camera.device@1.0
 
 # Connectivity Engine support (CNE)
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     cneapiclient \
     com.quicinc.cne \
     services-ext
 
 # Display
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
@@ -198,36 +198,36 @@ PRODUCT_PACKAGES += \
     libtinyxml
 
 # Doze mode
-#PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES= \
 #    OneplusDoze
 
 # DRM
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
 
 # Fingerprint sensor
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.biometrics.fingerprint@2.1-service \
     fingerprintd \
 
 # For android_filesystem_config.h
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     fs_config_files
 
 # Gatekeeper HAL
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.gatekeeper@1.0-impl
 
 # GPS
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.gnss@1.0-impl \
     gps.msm8998 \
     gps.conf \
     libgnsspps \
     libvehiclenetwork-native
 
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     $(LOCAL_PATH)/gps/etc/flp.conf:system/vendor/etc/flp.conf \
     $(LOCAL_PATH)/gps/etc/izat.conf:system/vendor/etc/izat.conf \
     $(LOCAL_PATH)/gps/etc/lowi.conf:system/vendor/etc/lowi.conf \
@@ -235,74 +235,74 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/vendor/etc/xtwifi.conf
 
 # Healthd
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.health@1.0-impl \
     android.hardware.health@1.0-convert \
     android.hardware.health@1.0-service
 
 # IPv6
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     ebtables \
     ethertypes
 
 # IRQ
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
 # IRSC
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
 # Keylayout
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     $(LOCAL_PATH)/keylayout/fpc1020.kl:system/usr/keylayout/fpc1020.kl \
     $(LOCAL_PATH)/keylayout/synaptics.kl:system/usr/keylayout/synaptics.kl
 
 # Keymaster
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.keymaster@3.0-impl
 
 # Lights
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.light@2.0-impl \
     lights.msm8998
 
 # Media
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     $(LOCAL_PATH)/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
 
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
 
 # Media Extensions
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     libavmediaserviceextensions \
     libmediametrics \
     libregistermsext \
     mediametrics \
 
 # Netutils
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     netutils-wrapper-1.0
 
 # NFC
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.nfc@1.0-impl \
     com.android.nfc_extras \
     nfc_nci.msm8998 \
     NfcNci \
     Tag
 
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     $(LOCAL_PATH)/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
 # OMX
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     libc2dcolorconvert \
     libextmedia_jni \
     libOmxAacEnc \
@@ -315,16 +315,16 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Power
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.power@1.0-impl \
     power.msm8998
 
 # QMI
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     libjson
 
 # Ramdisk
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     fstab.qcom \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
@@ -339,7 +339,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     $(LOCAL_PATH)/rootdir/bin/init.qti.qseecomd.sh:system/bin/init.qti.qseecomd.sh \
     $(LOCAL_PATH)/rootdir/etc/init.qcom.audio.sh:system/etc/init.qcom.audio.sh \
     $(LOCAL_PATH)/rootdir/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
@@ -352,49 +352,49 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
 
 # Recovery
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     librecovery_updater_cheeseburger
 
 # RenderScript HAL
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.renderscript@1.0-impl
 
 # RIL
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.broadcastradio@1.0-impl \
     librmnetctl \
     libxml2 \
     libprotobuf-cpp-full
 
 # Seccomp policy
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     $(LOCAL_PATH)/seccomp_policy/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp_policy/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
 
 # Sensors
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.sensors@1.0-impl \
     sensors.msm8998
 
 # Shims
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     libshims_system_properties
 
 # Thermal
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.thermal@1.0-impl \
 
 # USB
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.usb@1.0-service \
     com.android.future.usb.accessory
 
 # Vibrator
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.vibrator@1.0-impl
 
 # Wifi
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES= \
     android.hardware.wifi@1.0-service \
     ipacm \
     ipacm-diag \
@@ -407,7 +407,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES= \
     $(LOCAL_PATH)/wifi/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
     $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
     $(LOCAL_PATH)/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny \
