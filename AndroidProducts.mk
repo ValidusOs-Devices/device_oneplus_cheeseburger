@@ -16,3 +16,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/gzosp_cheeseburger.mk
+
+COMMON_LUNCH_CHOICES := \
+    gzosp_cheeseburger-userdebug
