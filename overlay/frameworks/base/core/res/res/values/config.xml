@@ -43,7 +43,4 @@
     <!-- Enable system navigation keys. -->
     <bool name="config_supportSystemNavigationKeys">true</bool>
 
-    <!-- Whether a software navigation bar should be shown. -->
-    <bool name="config_showNavigationBar">true</bool>
-
 </resources>
